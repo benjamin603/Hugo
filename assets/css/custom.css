@@ -1,0 +1,259 @@
+/* 全局字体 
+@font-face {
+    font-family: Noto Serif SC;
+    src: url('/fonts/NotoSerifSC-Medium.otf');
+}
+
+html {
+    font-family: Noto Serif SC;
+    font-size: 18px;
+}
+
+code {
+    font-family: Noto Serif SC;    
+}
+*/
+
+/* 文章页内容宽度 */
+.max-w-prose {
+    max-width: 90ch;
+}
+
+/* 好物页面 */
+:root {
+  --code-bg: #fafafa
+}
+
+.dark {
+  --code-bg: #3b3d42
+}
+
+div#goods {
+    padding-top: 1rem;
+}
+
+.goods-bankuai {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.33% - 16px);
+  height: 326px;
+  margin: 0 8px 12px 0;
+  list-style: none;
+  border-radius: 8px;
+  background: var(--code-bg);
+  padding: 0 16px;
+  overflow: hidden;
+}
+
+.goods-duiqi {
+  min-height: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.goods-duiqi img {
+  width: 80%;
+  margin: 0;
+  transition: transform .2s ease-in-out;
+  cursor: pointer
+}
+
+.goods-duiqi:hover img {
+  transform: translateY(-4px)
+}
+
+.goods-title {
+  font-size: 14px;
+  margin: 0;
+  transition: .5s
+}
+
+.goods-title a {
+  font-size: 14px;
+  text-decoration: none
+}
+
+.goods-jiage {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.4rem
+}
+
+.goods-note {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.3rem
+}
+
+@media (max-width:700px) {
+  .goods-bankuai {
+    width: 100%;
+    height: 100%;
+    padding: 0 2% 5% 2%
+  }
+
+  .goods-title {
+    font-size: 14px;
+    margin: 0 10px!important;
+    transition: .5s
+  }
+
+  .goods-jiage {
+    margin: 0 10px 0 10px
+  }
+
+  .goods-duiqi img {
+    width: 50%;
+    margin: 0
+  }
+
+  .goods-note {
+    line-height: 1.3rem;
+    margin: 8px 10px 0 10px
+  }
+
+  .goods-title {
+    font-size: 14px;
+    margin: 0 auto;
+    line-height: 1.5rem
+  }
+
+  .goods-title a {
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: none
+  }
+}
+
+@media screen and (min-width:700px) and (max-width:900px) {
+  .goods-quanju {
+    font-size: 0;
+    width: 106%
+  }
+
+  .goods-bankuai {
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    margin-right: 15px;
+    height: 420px;
+  }
+
+  .goods-title {
+    font-size: 14px;
+    margin: 0 auto;
+    line-height: 1.5rem;
+    transition: .5s
+  }
+
+  .goods-title a {
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: none
+  }
+}
+
+@media (min-width:900px) {
+  .goods-quanju {
+    font-size: 0;
+    width: 106%
+  }
+
+  .goods-bankuai {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 16px);
+    height: 390px;
+    margin: 0 8px 12px 0
+  }
+
+  .goods-note {
+    font-size: 14px;
+    line-height: 1.3rem;
+    margin-top: .5rem
+  }
+
+  .goods-duiqi img {
+    width: 80%;
+    margin: 0
+  }
+
+  .goods-bankuai.img-hide img {
+    transition: transform .2s ease-in-out;
+    cursor: pointer
+  }
+
+  .goods-bankuai.img-hide:hover img {
+    transform: translateY(-4px)
+  }
+
+  .goods-title {
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 1.6rem;
+    transition: .5s
+  }
+
+  .goods-title a {
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: none;
+    transition: .5s
+  }
+}
+
+/* Twikoo 评论提醒框 */
+  /* 设置文字内容 :nth-child(1)的作用是选择第几个 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
+  content: '输入QQ号会自动获取昵称和头像🐧';
+}
+
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
+  content: '收到回复将会发送到您的邮箱📧';
+}
+
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
+  content: '可以通过昵称访问您的网站🔗';
+}
+
+  /* 当用户点击输入框时显示 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
+  display: block;
+}
+
+  /* 主内容区 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::before {
+  /* 先隐藏起来 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  /* 向上移动60像素 */
+  top: -60px;
+  /* 文字强制不换行，防止left:50%导致的文字换行 */
+  white-space: nowrap;
+  /* 圆角 */
+  border-radius: 10px;
+  /* 距离左边50% */
+  left: 50%;
+  /* 然后再向左边挪动自身的一半，即可实现居中 */
+  transform: translate(-50%);
+  /* 填充 */
+  padding: 14px 18px;
+  background: #444;
+  color: #fff;
+}
+
+  /* 小角标 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::after {
+  display: none;
+  content: '';
+  position: absolute;
+  /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
+  我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
+  border: 12px solid transparent;
+  border-top-color: #444;
+  left: 50%;
+  transform: translate(-50%, -48px);
+}

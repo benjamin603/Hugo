@@ -1,0 +1,29 @@
+[[main]]
+  name = "文章"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "相册"
+  pre = "instagram"
+  url = "https://gallery.benjamin.xin"
+  weight = 50
+
+[[main]]
+  name = "朋友"
+  pageRef = "friends"
+  weight = 30
+  
+[[main]]
+  name = "好物推荐"
+  pageRef = "goods"
+  weight = 40
+
+[[main]]
+  pre = "github"
+  url = "https://github.com/benjamin"
+  weight = 60
+
+[[footer]]
+  name = "相册"
+  url = "https://gallery.benjamin.xin"

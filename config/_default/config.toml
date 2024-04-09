@@ -1,0 +1,80 @@
+baseURL = "https://your_domain.com/"
+defaultContentLanguage = "zh-cn"
+theme = "blowfish"
+title = "Benjamin.Xin"
+defaultContentLanguageInSubdir = false
+pluralizeListTitles = "true" 
+
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0
+smartTOC = true
+buildDrafts = false
+buildFuture = false
+
+
+
+[author]
+name = "Benjamin"
+image = "img/avatar2024.jpg"
+headline = "我语言的界限即我世界的界限"
+bio = "A little bit about me"
+links = [
+  { email = "mailto:3556932400@qq.com" },
+  { github = "https://github.com/benjamin603" },
+]
+
+[imaging]
+  anchor = 'Center'
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+
+[sitemap]
+  changefreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[related]
+  threshold = 0
+  toLower = false
+
+    [[related.indices]]
+        name = "tags"
+        weight = 100
+
+    [[related.indices]]
+        name = "categories"
+        weight = 100
+
+    [[related.indices]]
+        name = "series"
+        weight = 50
+
+    [[related.indices]]
+        name = "authors"
+        weight = 20
+
+    [[related.indices]]
+        name = "date"
+        weight = 10
+
+    [[related.indices]]
+      applyFilter = false
+      name = 'fragmentrefs'
+      type = 'fragments'
+      weight = 10
+      
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.renderer.tableOfContents]
+startLevel = 2
+endLevel = 6
+ordered = false
+markup.goldmark.parser.unsafe = true
