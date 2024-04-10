@@ -10,6 +10,12 @@ Hugo 是最流行的开源静态站点生成器之一。凭借其惊人的速度
 
 <!--more-->
 
+## 更新内容
+
+使用 Github + Cloudflare Pages来部署，因为不需要将 `Public` 文件夹推送到 Github，所以我们在部署到 Github 前现在本地创建 `.gitignore` 文件，并添加 `/public` ！
+
+
+
 ## 环境
 
 1. Windows 11；
