@@ -1,18 +1,18 @@
 /* 全局字体 
 @font-face {
-    font-family: Noto Serif SC;
+    font-family: font-family: "LXGW WenKai Screen", sans-serif;
     src: url('/fonts/NotoSerifSC-Medium.otf');
-}
+} */
 
 html {
-    font-family: Noto Serif SC;
+    font-family: "LXGW WenKai Screen", sans-serif;
     font-size: 18px;
 }
 
 code {
     font-family: Noto Serif SC;    
 }
-*/
+
 
 /* 文章页内容宽度 */
 .max-w-prose {
